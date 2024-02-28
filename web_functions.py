@@ -7,6 +7,7 @@ from sklearn.tree import DecisionTreeClassifier
 import streamlit as st
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder as lb
+from sklearn.model_selection import train_test_split
 
 @st.cache_data()
 def load_data():
@@ -40,13 +41,18 @@ def load_data():
 @st.cache_data()
 def train_model(X, y):
     """This function trains the model and return the model and model score"""
+    # Split the data into training and testing sets
+    X_train,x_test,y_train,y_test = train_test_split(X,y,test_size=0.2,random_state=104,shuffle=True)
+
     # Create the model
     model = RandomForestClassifier (n_estimators=50, random_state=42)
 
     # Fit the data on model
-    model.fit(X, y)
+    model.fit(X_train, y_train)
+
     # Get the model score
-    score = model.score(X, y)
+    score = model.score(x_test, y_test)
+
     # Return the values
     return model, score
 
