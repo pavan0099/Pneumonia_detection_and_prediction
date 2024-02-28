@@ -25,7 +25,7 @@ def app():
 
     uploaded_file = st.file_uploader("Choose a File", type=['jpg','png','jpeg'])
 
-    score = np.load('C:/Users/pavan/Downloads/Pneumonia-Detector-master-main/Pneumonia-Detector-master-main/Model1_acc.npy')
+    score = np.load('BreadcrumbsPneumonia_detection_and_prediction/Model1_acc.npy')
     
     if uploaded_file!=None:
         st.image(uploaded_file)
