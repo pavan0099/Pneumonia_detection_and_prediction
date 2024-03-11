@@ -47,6 +47,5 @@ elif (page == "Data Info"):
     Tabs[page].app(df)
 elif (page == "Detection"):
     Tabs[page].app()
-
 else:
     Tabs[page].app(df, X, y)
