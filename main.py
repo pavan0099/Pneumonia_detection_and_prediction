@@ -46,11 +46,7 @@ if page in ["Prediction", "Visualisation"]:
 elif (page == "Data Info"):
     Tabs[page].app(df)
 elif (page == "Detection"):
-    try:
     Tabs[page].app()
-except Exception as e:
-    print(f"An error occurred while executing Tabs[page].app(): {e}")
-    # Handle the error or log it as needed
 
 else:
     Tabs[page].app(df, X, y)
