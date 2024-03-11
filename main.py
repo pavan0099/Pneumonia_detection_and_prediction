@@ -51,4 +51,4 @@ else:
     Tabs[page].app(df, X, y)
     TypeError
     raise TypeError(
-    TypeError
+TypeError
