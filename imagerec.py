@@ -1,4 +1,4 @@
-from tensorflow.keras.models import tf.keras.models.load_model()
+from tensorflow.keras.models import keras.models.load_model()
 from PIL import Image, ImageOps  
 import numpy as np
 def imagerecognise(uploadedfile,modelpath,labelpath):
