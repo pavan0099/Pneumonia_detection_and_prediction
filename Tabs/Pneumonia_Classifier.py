@@ -43,7 +43,7 @@ def app():
     'depthwise_initializer': {'class_name': 'VarianceScaling', 'config': {'scale': 1, 'mode': 'fan_avg', 'distribution': 'uniform', 'seed': None}},
     'depthwise_regularizer': None,
     'depthwise_constraint': None
-}
+    }
      score = np.load("Model1_acc.npy")
     
     if uploaded_file!=None:
