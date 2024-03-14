@@ -24,7 +24,7 @@ def app():
     st.divider()
 
     uploaded_file = st.file_uploader("Choose a File", type=['jpg','png','jpeg'])
-     score = np.load("Model1_acc.npy")
+    score = np.load("Model1_acc.npy")
     
     if uploaded_file!=None:
         st.image(uploaded_file)
