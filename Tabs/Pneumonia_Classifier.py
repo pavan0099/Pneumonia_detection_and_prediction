@@ -24,28 +24,6 @@ def app():
     st.divider()
 
     uploaded_file = st.file_uploader("Choose a File", type=['jpg','png','jpeg'])
-    {
-    'name': 'expanded_conv_depthwise',
-    'trainable': True,
-    'dtype': 'float32',
-    'kernel_size': [3, 3],
-    'strides': [1, 1],
-    'padding': 'same',
-    'data_format': 'channels_last',
-    'dilation_rate': [1, 1],
-    'activation': 'linear',
-    'use_bias': False,
-    'bias_initializer': {'class_name': 'Zeros', 'config': {}},
-    'bias_regularizer': None,
-    'activity_regularizer': None,
-    'bias_constraint': None,
-    'depth_multiplier': 1,
-    'depthwise_initializer': {'class_name': 'VarianceScaling', 'config': {'scale': 1, 'mode': 'fan_avg', 'distribution': 'uniform', 'seed': None}},
-    'depthwise_regularizer': None,
-    'depthwise_constraint': None
-    }
-
-    
     score = np.load("Model1_acc.npy")
     
     if uploaded_file!=None:
