@@ -19,5 +19,3 @@ def imagerecognise(uploadedfile,modelpath,labelpath):
     # print("Class:", class_name[2:], end="")
     # print("Confidence Score:", confidence_score)
     return(class_name[2:],confidence_score)
-    # Load the model
-    model = load_model('path/to/your/model.h5')
