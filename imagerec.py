@@ -1,4 +1,4 @@
-from tensorflow.keras.models import keras.models.load_model()
+from from tensorflow.keras.models import load_model
 from PIL import Image, ImageOps  
 import numpy as np
 def imagerecognise(uploadedfile,modelpath,labelpath):
@@ -19,3 +19,5 @@ def imagerecognise(uploadedfile,modelpath,labelpath):
     # print("Class:", class_name[2:], end="")
     # print("Confidence Score:", confidence_score)
     return(class_name[2:],confidence_score)
+    # Load the model
+    model = load_model('path/to/your/model.h5')
